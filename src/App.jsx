@@ -1787,6 +1787,7 @@ export default function FusionFalseDashboard() {
                 </Section>
               )}
             </div>
+              <div className="mt-4" />
 
               {canShowSection(lens, "individual_model") && (
                 <Section
