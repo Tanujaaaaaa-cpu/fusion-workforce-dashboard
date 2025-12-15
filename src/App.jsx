@@ -1069,14 +1069,38 @@ export default function FusionFalseDashboard() {
     setOpenLeft(true);
   };
 
-  // Map data (fallback demo cities; can be overridden from Mongo)
+  // // Map data (fallback demo cities; can be overridden from Mongo)
+  // const FALLBACK_CITIES = [
+  //   { name:"London (HQ)",   coords:[-0.1276,51.5072], people:34, remote:54, team:"Sales" },
+  //   { name:"Krakow",        coords:[19.9449,50.0647], people:22, remote:48, team:"Ops" },
+  //   { name:"Bengaluru",     coords:[77.5946,12.9716], people:58, remote:42, team:"Engineering" },
+  //   { name:"Singapore",     coords:[103.8198,1.3521], people:9,  remote:38, team:"Finance" },
+  //   { name:"New York",      coords:[-74.0060,40.7128],people:11, remote:46, team:"HR" },
+  // ];
+
   const FALLBACK_CITIES = [
-    { name:"London (HQ)",   coords:[-0.1276,51.5072], people:34, remote:54, team:"Sales" },
-    { name:"Krakow",        coords:[19.9449,50.0647], people:22, remote:48, team:"Ops" },
-    { name:"Bengaluru",     coords:[77.5946,12.9716], people:58, remote:42, team:"Engineering" },
-    { name:"Singapore",     coords:[103.8198,1.3521], people:9,  remote:38, team:"Finance" },
-    { name:"New York",      coords:[-74.0060,40.7128],people:11, remote:46, team:"HR" },
+    // UK / Europe
+    { name:"London (HQ)",     coords:[-0.1276,51.5072], people:34, remote:45, team:"Sales" },
+
+    // India
+    { name:"Bengaluru",       coords:[77.5946,12.9716], people:58, remote:40, team:"Engineering" },
+
+    // APAC
+    { name:"Singapore",       coords:[103.8198,1.3521], people:9,  remote:35, team:"Finance" },
+
+    // North America
+    { name:"New York",        coords:[-74.0060,40.7128],people:11, remote:46, team:"HR" },
+
+    // Middle East / Africa (optional but shows global footprint)
+    { name:"Dubai",           coords:[55.2708,25.2048], people:7,  remote:45, team:"Sales" },
+
+    { name:"São Paulo",       coords:[-46.6333,-23.5505],people:6,  remote:65, team:"Engineering" },
+
+    { name:"Beijing",        coords:[116.4074,39.9042], people:8,  remote:35, team:"Engineering" },
+
+    { name:"Berlin",        coords:[13.4050,52.5200], people:9,  remote:55, team:"Engineering" },
   ];
+
   const CITIES = citiesConfig || FALLBACK_CITIES;
 
   // Narration
